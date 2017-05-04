@@ -244,10 +244,6 @@ Version: 1.0.0
 
 #blogdesc {
   float: left;
-  margin-top: 25px;
-  padding-left: 10px;
-  margin-left: 10px;
-  border-left: 1px solid #ddd;
 }
 /* Styles For Boxed Header */
 #header.boxed { position: absolute; z-index: 999; }
