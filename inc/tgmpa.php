@@ -54,6 +54,22 @@ function travelblog_register_required_plugins() {
 			'required'  					=> true,
 			'force_activation'   	=> true,
 		),
+		array(
+      'name'                => esc_html__('Purethemes.net Shortcodes','holomatic' ),
+      'slug'                => 'purethemes-shortcodes',
+      'source'              => get_template_directory_uri() . '/plugins/purethemes-shortcodes.zip',
+      'version'             => '2.2',
+      'required'            => true,
+      'force_activation'   	=> true,
+	  ),
+    array(
+      'name'                => esc_html__('Web Fonts Social Icons WP','holomatic' ),
+      'slug'                => 'web-font-social-icons',
+      'source'              => get_template_directory_uri() . '/plugins/web-font-social-icons.zip',
+      'version'             => '1.4',
+      'required'            => true,
+      'force_activation'   	=> true,
+	  ),
 	);
 
 	/*
