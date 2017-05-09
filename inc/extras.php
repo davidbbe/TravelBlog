@@ -224,7 +224,7 @@ function wpv_about_author(){
         <div class="about-author">
             <?php echo get_avatar( $post->post_author, 94 ); ?>
             <div class="about-description">
-                <h5><span class="author vcard"><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) ; ?>"><?php echo esc_html( get_the_author() ) ?></a></span></h5>
+                <h5><span class="author vcard"><?php echo esc_html( get_the_author() ) ?></span></h5>
                 <p><?php the_author_meta('description',get_the_author_meta( 'ID' )); ?></p>
             </div>
         </div> <?php    

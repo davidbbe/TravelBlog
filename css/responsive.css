@@ -193,7 +193,7 @@
         #header.boxed { width: 100%; }
 
         .full-width .sixteen.columns.alignment,
-       .full-width  .full-width-element {
+        .full-width  .full-width-element {
             width: 748px !important;
             margin: 0;
         }
@@ -207,7 +207,12 @@
     /* Note: Design for a width of 320px */
 
     @media only screen and (max-width: 767px) {
-        .container { width: 300px; }
+        .container { 
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
         .container .columns,
         .container .column { margin: 0; }
 
@@ -235,10 +240,12 @@
         .container .twelve.sidebar-right.columns,
         .container .twelve.sidebar-left.columns,
         .container .five.sidebar-right.columns,
-        .container .eleven.sidebar-right.columns { width: 300px; }
+        .container .eleven.sidebar-right.columns { 
+            width: 100%; 
+        }
 
-        .full-width-element.photoGrid { width: 305px; }
-        .eleven .full-width-element.photoGrid { width: 300px; }
+        .full-width-element.photoGrid { width: 100%; }
+        .eleven .full-width-element.photoGrid { width: 100%; }
         .related-posts ul li,
         .eleven.columns .related-posts ul li { width: 100%; }
         .container .five.columns.sidebar { width: 100%; padding-left: 0; }
@@ -253,57 +260,6 @@
         }
     }
 
-
-/* #Mobile (Landscape)
-================================================== */
-
-    /* Note: Design for a width of 480px */
-
-    @media only screen and (min-width: 480px) and (max-width: 767px) {
-        .container { width: 420px; }
-        .container .columns,
-        .container .column { margin: 0; }
-
-        .container .one.column,
-        .container .one.columns,
-        .container .two.columns,
-        .container .three.columns,
-        .container .four.columns,
-        .container .five.columns,
-        .container .six.columns,
-        .container .seven.columns,
-        .container .eight.columns,
-        .container .nine.columns,
-        .container .ten.columns,
-        .container .eleven.columns,
-        .container .twelve.columns,
-        .container .thirteen.columns,
-        .container .fourteen.columns,
-        .container .fifteen.columns,
-        .container .sixteen.columns,
-        .container .one-third.column,
-        .container .two-thirds.column,
-        .container .one-third.columns,
-        .container .two-thirds.columns,
-        .container .twelve.sidebar-right.columns,
-        .container .twelve.sidebar-left.columns,
-        .container .five.sidebar-right.columns,
-        .container .eleven.sidebar-right.columns { width: 420px; }
-
-        .full-width-element.photoGrid { width: 425px; }
-        .eleven .full-width-element.photoGrid { width: 420px; }
-        .related-posts ul li,
-        .eleven.columns .related-posts ul li { width: 100%; }
-        .container .five.columns.sidebar { width: 100%; padding-left: 0; }
-        .header-search,
-        #header.boxed { width: 100%; }
-
-        .full-width .sixteen.columns.alignment,
-        .full-width .full-width-element {
-            width: 100% !important;
-            margin: 0;
-        }
-    }
 
 
 /* #Clearing
