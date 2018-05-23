@@ -35,7 +35,7 @@ Version: 1.0.1
 /* ------------------------------------------------------------------- */
 /* Import Section
 ---------------------------------------------------------------------- */
-@import url("css/base.css");				/* Default Reset, Typography, Forms, etc. */
+@import url("css/base.css");						/* Default Reset, Typography, Forms, etc. */
 @import url("css/responsive.css");			/* Responsive Grid */
 @import url("css/font-awesome.css");		/* Font Awesome Icons */
 
@@ -920,10 +920,11 @@ figure.image-right figcaption,
 figure.image-left figcaption,
 .wp-caption-text{
 	background-color: #f4f4f4;
-	font-weight: 600;
+	font-weight: 400;
+	line-height: 1.1em;
 	font-size: 15px;
-	color: #888;
-	padding: 10px 20px;
+	color: #666;
+	padding: 8px 15px;
 }
 
 .wp-caption-text { background-color: #fff; 	margin: 0 !important;}
@@ -4378,7 +4379,7 @@ input:focus.newsletter {
 
 
 /* Smaller than standard 1180 (devices and browsers) */
-@media only screen and (min-width: 960px) and (max-width: 1469px) {
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
 	.post-content { padding: 55px 12%; }
 
 	ul.share-buttons li { width: 85px; }
@@ -4392,7 +4393,6 @@ input:focus.newsletter {
 	.post-title h2 { font-size: 24px; line-height: 28px;}
 	.box-item.no-thumb { height: 450px;}
 	.eleven.columns .box-item.no-thumb { height: 305px;}
-	.author-box img {display: none;}
 
 	.eleven.columns .box-item-text h2 a,
 	.eleven.columns .box-item-text h2 {
@@ -4753,10 +4753,6 @@ object {
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 0 auto;
-}
-
-.wp-caption-text {
-	text-align: center;
 }
 
 .wp-caption .wp-caption-text {
