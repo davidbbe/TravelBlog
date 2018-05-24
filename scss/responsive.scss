@@ -248,8 +248,14 @@
         .eleven .full-width-element.photoGrid { width: 100%; }
         .related-posts ul li,
         .eleven.columns .related-posts ul li { width: 100%; }
-        .container .five.columns.sidebar { width: 100%; padding-left: 0; }
+        .container .five.columns.sidebar { width: 100%; padding-left: 0 !important; }
 
+        .container .five.columns.sidebar .widget:first-child {
+            display: none;
+        }
+        #single-page-container .columns.sidebar {
+            padding-top: 0 !important;
+        }
         .header-search,
         #header.boxed { width: 100%; }
 

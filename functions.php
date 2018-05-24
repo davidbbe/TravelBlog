@@ -219,6 +219,7 @@ add_action('wp_default_styles', 'my_wp_default_styles');
  */
 function travelblog_scripts() {
 	//wp_enqueue_style( 'travelblog-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css');
 	wp_enqueue_style( 'travelblog-styles', get_template_directory_uri() . '/styles.css' );
 
 	wp_enqueue_script( 'travelblog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );

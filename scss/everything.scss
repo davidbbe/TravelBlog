@@ -3847,10 +3847,10 @@ h2.comments-title {
 }
 
 .viewer li>div {
-  left:50px;
-  top:50px;
-  bottom:50px;
-  right:50px
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
 }
 
 .viewer li.loading>div { background:url(img/loading.gif) center center no-repeat }
