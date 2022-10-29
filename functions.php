@@ -72,17 +72,6 @@ function travelblog_setup() {
 	 */
 	load_theme_textdomain( 'travelblog', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
@@ -223,11 +212,6 @@ function travelblog_scripts() {
 	wp_enqueue_style( 'travelblog-styles', get_template_directory_uri() . '/styles.css' );
 
 	wp_enqueue_script( 'travelblog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
-	$colorscheme = get_theme_mod('travelblog_scheme','default');
-	if ($colorscheme != 'default') {
-		wp_enqueue_style( 'travelblog-scheme', get_template_directory_uri().'/css/'.$colorscheme.'.css' );
-	}
-
 	wp_enqueue_script( 'travelblog-jpanelmenu', get_template_directory_uri() . '/js/jquery.jpanelmenu.js', array('jquery'), null, true );
 	wp_enqueue_script( 'travelblog-superfish', get_template_directory_uri() . '/js/jquery.superfish.js', array('jquery'), null, true );
 	wp_enqueue_script( 'travelblog-easing', get_template_directory_uri() . '/js/jquery.easing-1.3.js', array('jquery'), null, true );

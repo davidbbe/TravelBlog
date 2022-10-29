@@ -828,7 +828,7 @@ function custom_theme_options() {
             'id'          => 'pp_copyrights',
             'type'        => 'text',
             'desc'        => 'Text in footer',
-            'std'         => '&copy; Theme by <a href="http://themeforest.net/user/purethemes/portfolio?ref=purethemes">Purethemes.net</a>. All Rights Reserved.',
+            'std'         => 'Footer text can be edited in the theme customizer editor.',
             'rows'        => '',
             'post_type'   => '',
             'taxonomy'    => '',

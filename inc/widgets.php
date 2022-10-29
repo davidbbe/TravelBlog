@@ -78,15 +78,13 @@ class travelblog_author extends WP_Widget {
     ?>
     <div class="widget">
       <div class="author-box">
-        <?php echo get_avatar( get_the_author_meta('ID', $user_id), 95 ); ?>
-        <span class="title"> <?php if ( !empty($title) ) { echo esc_html($title); } ?></span>
-        <span class="name"><?php echo esc_html(get_the_author_meta('display_name', $user_id)); ?></span>
-
-        <?php if($instance['display_email']) : ?>
-          <?php $email = get_the_author_meta( 'user_email', $user_id ) ?>
-          <a href="mailto:<?php echo esc_url($email); ?>"><span class="contact"><?php echo esc_html($email); ?></span></a>
-        <?php endif; ?>
-        
+        <div class="author-box-top">
+          <div>
+            <span class="title"> <?php if ( !empty($title) ) { echo esc_html($title); } ?></span>
+            <span class="name"><?php echo esc_html(get_the_author_meta('display_name', $user_id)); ?></span>
+          </div>
+          <?php echo get_avatar( get_the_author_meta('ID', $user_id), 95 ); ?>
+        </div>
         <?php echo wpautop(get_the_author_meta('description',$user_id)); ?>
       </div>
     </div>

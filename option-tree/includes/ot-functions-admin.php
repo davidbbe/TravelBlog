@@ -5215,7 +5215,7 @@ function ot_fetch_google_fonts( $normalize = true, $force_rebuild = false ) {
 
     /* API url and key */
     $ot_google_fonts_api_url = apply_filters( 'ot_google_fonts_api_url', 'https://www.googleapis.com/webfonts/v1/webfonts' );
-    $ot_google_fonts_api_key = apply_filters( 'ot_google_fonts_api_key', 'AIzaSyB8G-4UtQr9fhDYTiNrDP40Y5GYQQKrNWI' );
+    $ot_google_fonts_api_key = apply_filters( 'ot_google_fonts_api_key', 'AIzaSyB80nf4Dm13Np9Gl-CrWQpXlo33HrxTwCA' );
 
     /* API arguments */
     $ot_google_fonts_fields = apply_filters( 'ot_google_fonts_fields', array( 'family', 'variants', 'subsets' ) );

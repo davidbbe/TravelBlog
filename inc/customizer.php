@@ -77,21 +77,6 @@ function travelblog_customize_register( $wp_customize ) {
             )
     ));
 
-    $wp_customize->add_setting( 'travelblog_scheme', array(
-        'default'  => 'default',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'esc_attr',
-    ));
-    $wp_customize->add_control( 'travelblog_scheme', array(
-        'settings' => 'travelblog_scheme',
-        'label'    => __( 'Change colour scheme','travelblog' ),
-        'section'  => 'colors',
-        'type'     => 'select',
-        'choices'    => array(
-            'default' => 'Default',
-            'dark' => 'Dark',
-            )
-    ));
     $wp_customize->add_setting( 'travelblog_header_scheme', array(
         'default'  => 'default',
         'transport' => 'refresh',

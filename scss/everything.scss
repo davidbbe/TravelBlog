@@ -37,7 +37,6 @@
   z-index: 1000;
   background: #222;
   position: relative;
-  min-height: 79px;
 }
 
 .black #logo img { margin-top: 28px; float: left;}
@@ -201,7 +200,6 @@
   z-index: 999;
   background: #fff;
   position: relative;
-  min-height: 85px;
 }
 
 #logo { margin-left: 0; }
@@ -1448,7 +1446,8 @@ padding: 2px 0; */
 .footer-widget.widget_nav_menu li a,
 .footer-widget.widget_recent_comments li a,
 #footer .widget_recent_comments li a,
-.footer-widget.widget_meta li a {
+.footer-widget.widget_meta li a,
+.footer-widget.widget_block h2 {
   color: #aaa;
 }
 
@@ -1733,6 +1732,11 @@ select#cat,
   position: relative;
 }
 
+.author-box-top {
+  display: flex;
+  justify-content: space-between;
+}
+
 .author-box span { display: block; }
 
 .author-box .title {
@@ -1779,9 +1783,6 @@ select#cat,
 
 .author-box img {
   border-radius: 50%;
-  position: absolute;
-  right: 0px;
-  margin-top: 0px;
   height: 80px;
   width: 80px;
 }
@@ -2804,7 +2805,7 @@ img.rsImg {
     position: relative;
     top: 0;
     left: 0;
-    height: 720px;
+    height: 620px;
     width: 100%;
     z-index: 990;
 }
@@ -3167,7 +3168,7 @@ a.post-img {
   background-color: #333
 }
  .post a.post-img img {
-  width: auto;
+  width: 100%;
   margin:0px auto;
  }
 
@@ -3592,6 +3593,10 @@ ul.post-series-links li { line-height: 24px; padding: 0; list-style: none; color
 
 /* Related Posts
 ------------------------------------- */
+.other-content {
+  margin-top: 50px;
+}
+
 .related-posts {
   position: relative;
   margin: 0 0 40px 0;
@@ -3911,7 +3916,7 @@ h2.comments-title {
 ---------------------------------------------------------------------- */
 #footer {
   background-color: #202020;
-  padding: 55px 0 45px 0;
+  padding: 55px 0 20px 0;
   color: #aaa;
   font-size: 16px;
 }
@@ -3970,7 +3975,7 @@ h2.comments-title {
 /* Copyright Styles */
 .copyright {
   text-align: center;
-  font-weight: 600;
+  font-size: 14px;
 }
 
 .copyright a {
@@ -4309,6 +4314,9 @@ input:focus.newsletter {
   border-bottom: 3px solid #3685cf;
   margin: 0 0 40px 0;
   padding: 28px 35px 15px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .fun-fact {
@@ -4336,6 +4344,7 @@ input:focus.newsletter {
   font-weight: 700;
   float: left;
   top: 2px;
+  line-height: 1.2;
 }
 
 .fun-fact span { 
@@ -4343,7 +4352,7 @@ input:focus.newsletter {
   text-transform: none;
   font-weight: 500;
   display: block;
-  top: -8px;
+  top: 0;
   position: relative;
   letter-spacing: 0;
 }
@@ -4368,7 +4377,7 @@ input:focus.newsletter {
 
   .menu ul > li > a { padding: 33px 9px 31px 9px; }
   .menu ul li {  margin-left: 7px; }
-  #map-container { height: 620px; }
+  #map-container { height: 520px; }
   .post-title { padding: 21px 24px 18px 24px; }
   .post-title h1, 
   .post-title h2 { font-size: 24px; line-height: 28px;}
@@ -4407,7 +4416,7 @@ input:focus.newsletter {
 
   .author-box img { width: 50px; height: 50px; }
 
-  #map-container { height: 640px; }
+  #map-container { height: 450px; }
   .post-title { padding: 21px 24px 18px 24px; }
   .post-title h1,
   .post-title h2 { font-size: 24px; line-height: 28px;}
