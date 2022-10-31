@@ -82,7 +82,7 @@ function travelblog_setup() {
 	add_image_size('full-blog', 1260, 600, true);     
 	add_image_size('full-content', 1260, 0, true); 
 	add_image_size('grid-size', 760, 0, true);   
-	add_image_size('sb-blog', 860, 530, true);    
+	add_image_size('sb-blog', 860, 420, true);    
 	add_image_size('widget', 300, 200, true);     
 	add_image_size('carousel', 720, 460, true);     
 	add_image_size('widget', 80, 80, true); 
@@ -213,7 +213,6 @@ function travelblog_scripts() {
 
 	wp_enqueue_script( 'travelblog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
 	wp_enqueue_script( 'travelblog-jpanelmenu', get_template_directory_uri() . '/js/jquery.jpanelmenu.js', array('jquery'), null, true );
-	wp_enqueue_script( 'travelblog-superfish', get_template_directory_uri() . '/js/jquery.superfish.js', array('jquery'), null, true );
 	wp_enqueue_script( 'travelblog-easing', get_template_directory_uri() . '/js/jquery.easing-1.3.js', array('jquery'), null, true );
 	wp_enqueue_script( 'travelblog-royalslider', get_template_directory_uri() . '/js/jquery.royalslider.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'travelblog-hoverIntent', get_template_directory_uri() . '/js/hoverIntent.js', array('jquery'), null, true );
@@ -232,15 +231,15 @@ function travelblog_scripts() {
 	$mapoptions = get_option( 'travellerpress_globalMapSettings' );
 	$map_el_style = (isset($mapoptions['map_el_style'])) ? $mapoptions['map_el_style'] : 'default' ;
 	$styles = get_option( 'travellerpress_settings' );
-	if( $map_el_style != "default" ) { $mapstyle = $styles[$map_el_style]; } else { $mapstyle = '';}
-
+	if( $map_el_style != "default" ) {
+		$mapstyle = $styles[$map_el_style]; } else { $mapstyle = '';
+	}
 	//$maptype = (isset($mapoptions['map_el_type'])) ? $mapoptions['map_el_type'] : 'ROADMAP' ;
+
 	wp_localize_script( 'travelblog-custom', 'wpv',
     array(
       'logo'=> ot_get_option('pp_logo_upload'),
-      'retinalogo'=> ot_get_option('pp_logo_retina_upload'),
       'mobilelogo'=> ot_get_option('pp_mobilelogo_upload'),
-      'mobileretinalogo'=> ot_get_option('pp_mobilelogo_retina_upload'),
       'maptype'=> (isset($mapoptions['map_el_type'])) ? $mapoptions['map_el_type'] : 'ROADMAP' ,
       'mapzoom'=> (isset($mapoptions['map_el_zoom'])) ? $mapoptions['map_el_zoom'] : 'auto' ,
       'mapstyle'=> $mapstyle,

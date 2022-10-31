@@ -147,6 +147,42 @@ function custom_theme_options() {
           'section'     => 'home'
         ),
         array(
+          'label'       => 'Hero image',
+          'id'          => 'pp_hero_image',
+          'type'        => 'upload',
+          'desc'        => 'Add a full width hero image to show at the top of the home page and above the map. Leave blank and the map can show at the top.',
+          'std'         => '',
+          'rows'        => '',
+          'post_type'   => '',
+          'taxonomy'    => '',
+          'class'       => '',
+          'section'     => 'home'
+        ),
+        array(
+          'label'       => 'Hero image title text',
+          'id'          => 'pp_hero_image_title',
+          'type'        => 'text',
+          'desc'        => 'Title text in the hero image.',
+          'std'         => '',
+          'rows'        => '',
+          'post_type'   => '',
+          'taxonomy'    => '',
+          'class'       => '',
+          'section'     => 'home'
+        ),
+        array(
+          'label'       => 'Hero image subtitle text',
+          'id'          => 'pp_hero_image_subtitle',
+          'type'        => 'text',
+          'desc'        => 'Subtitle text in the hero image.',
+          'std'         => '',
+          'rows'        => '',
+          'post_type'   => '',
+          'taxonomy'    => '',
+          'class'       => '',
+          'section'     => 'home'
+        ),
+        array(
           'id'          => 'pp_custom_map_global',
           'label'       => __( 'Custom map on home page', 'theme-text-domain' ),
           'std'         => '',
@@ -333,19 +369,7 @@ function custom_theme_options() {
             'taxonomy'    => '',
             'class'       => '',
             'section'     => 'header'
-        ),
-        array(
-            'label'       => 'Upload Retina logo',
-            'id'          => 'pp_logo_retina_upload',
-            'type'        => 'upload',
-            'desc'        => 'Double sized logo version. You can either double the amount of pixels, or the dpi, it’s the same thing. So if your logo.png file is 200×100, make the @2x file 400×200, or just double the dpi (from 72 to 144 for example.)',
-            'std'         => '',
-            'rows'        => '',
-            'post_type'   => '',
-            'taxonomy'    => '',
-            'class'       => '',
-            'section'     => 'header'
-        ),        
+        ),    
         array(
             'label'       => 'Upload Mobile logo',
             'id'          => 'pp_mobilelogo_upload',
@@ -358,19 +382,6 @@ function custom_theme_options() {
             'class'       => '',
             'section'     => 'header'
         ),
-        array(
-            'label'       => 'Upload Mobile Retina logo',
-            'id'          => 'pp_mobilelogo_retina_upload',
-            'type'        => 'upload',
-            'desc'        => 'Double sized the mobile logo version.',
-            'std'         => '',
-            'rows'        => '',
-            'post_type'   => '',
-            'taxonomy'    => '',
-            'class'       => '',
-            'section'     => 'header'
-        ),
-
         array(
           'label'       => 'Logo top margin',
           'id'          => 'pp_logo_top_margin',

@@ -15,21 +15,20 @@ if($titlebar != 'off') {
 	$parallaximage = get_post_meta( $post->ID, 'pp_parallax_bg', TRUE );
 	$parallaxcolor = get_post_meta( $post->ID, 'pp_parallax_color', TRUE );
 	$opacity = get_post_meta( $post->ID, 'pp_parallax_opacity', TRUE );
-        if(empty($opacity)) {
-            $parallaxopacity = "0.35";
-        } else {
-            $parallaxopacity = $opacity;
-        }
+	if(empty($opacity)) {
+			$parallaxopacity = "0.35";
+	} else {
+			$parallaxopacity = $opacity;
+	}
 	if(!empty($parallaximage)) {
 		if(empty($parallaxcolor)) { $parallaxcolor = "#000000";}
 		$custom_rgb = purehex2RGB($parallaxcolor); 
 		
 		if($custom_rgb) {
-		    $red = $custom_rgb['red'];
-		    $green = $custom_rgb['green'];
-		    $blue = $custom_rgb['blue'];
-		
-	}
+			$red = $custom_rgb['red'];
+			$green = $custom_rgb['green'];
+			$blue = $custom_rgb['blue'];
+		}
 	?>
 	<section class="parallax-titlebar background parallax <?php if( $mapstatus == 'on') { echo "has-map"; } ?>"  style="background: url(<?php echo esc_url($parallaximage); ?>); " data-height="160">
 		<div class="parallax-overlay" style="background: rgba(<?php echo $red.','.$green.','.$blue.','.$parallaxopacity; ?>)"></div>

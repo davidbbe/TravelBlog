@@ -296,6 +296,12 @@ function pp_box($atts, $content = null) {
 
 add_shortcode('box', 'pp_box');
 
+
+/**
+* Button shortcodes
+* Usage: [button url="https://google.com" color="#4a4a4a"]Button text here[/button]
+*/
+
 function pp_button($atts, $content = null) {
     extract(shortcode_atts(array(
         "url" => '#',
@@ -329,6 +335,10 @@ function pp_button($atts, $content = null) {
 }
 add_shortcode('button', 'pp_button');
 
+/*
+* Button shortcodes
+* Usage: 
+*/
 
 function pp_share_btn($atts) {
     extract(shortcode_atts(array(
@@ -429,7 +439,10 @@ function pp_basic_slider( $atts, $content ) {
 }
 add_shortcode( 'slider', 'pp_basic_slider' );
 
-
+/*
+* Photogrid shortcodes
+* Usage: [photogrid ids="" columns="two" fullwidth="yes"]
+*/
 function pp_photoGrid( $atts, $content ) {
     extract(shortcode_atts(array(
         'ids' => '',

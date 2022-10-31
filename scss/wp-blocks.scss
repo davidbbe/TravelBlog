@@ -1,0 +1,12 @@
+.wp-block-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wp-block-button__link {
+  background-color: #c29591;
+  &:hover {
+    background-color: #282828;
+  }
+}

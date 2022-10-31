@@ -1,54 +1,7 @@
-/*global  wpv */
+/* global  wpv */
 (function($){
-    "use strict";
-
-    $(document).ready(function(){
-
-  
-    //  Navigation
-  
-    function menumobile(){
-        var winWidth = $(window).width();
-        if( winWidth < 973 ) {
-            $('#navigation').removeClass('menu');
-            $('#navigation li').removeClass('dropdown');
-            $('#navigation').superfish('destroy');
-            if(wpv.mobilelogo) {
-              $('#logo img').attr('src',wpv.mobilelogo);
-            }
-        } else {
-            $('#navigation').addClass('menu');
-            $('#navigation').superfish({
-                delay:       300,                               // one second delay on mouseout
-                animation:   {opacity:'show', height:'show'},   // fade-in and slide-down animation
-                speed:       200,                               // animation speed
-                speedOut:    50                                 // out animation speed
-            });
-            $('#logo img').attr('src',wpv.logo)
-        }
-    }
-
-    $(window).resize(function (){
-        menumobile();
-    });
-    menumobile();
-
-    var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : 1;
-
-    $(window).on("load", function() {
-      if (pixelRatio > 1) {
-        if(wpv.retinalogo) {
-          $('#logo img').attr('src',wpv.retinalogo);
-        }
-        var winWidth = $(window).width();
-        if( winWidth < 973 ) {
-          $('#logo img').attr('src',wpv.mobileretinalogo);
-        } else {
-          $('#logo img').attr('src',wpv.retinalogo);
-        }
-      }
-    });
-
+  "use strict";
+  $(document).ready(function(){
 
 
     /*----------------------------------------------------*/
@@ -121,11 +74,6 @@
     }
 
 
-    // Removes SuperFish Styles
-    $('#jPanelMenu-menu').removeClass('sf-menu');
-    $('#jPanelMenu-menu li ul').removeAttr('style');
-
-
     $(window).resize(function (){
       var winWidth = $(window).width();
       var jpmactive = $('.menu-trigger');
@@ -184,8 +132,7 @@
         arrowsNavAutoHide: false,
         arrowsNavHideOnTouch: true,
         keyboardNavEnabled: true,
-        fadeinLoadedSlide: true,
-
+        fadeinLoadedSlide: true
       });
 
 
@@ -555,5 +502,3 @@
 });
 
 })(this.jQuery);
-
-

@@ -32,15 +32,54 @@ $position = ot_get_option('pp_front_map_position','behind');
 	<!-- Container -->
 	<div class="container <?php echo esc_attr($layout); ?>">
 
-		<?php 
-		if ($mapflag) { ?>
-			<!-- Map Navigation -->
-			<ul id="mapnav-buttons" class="<?php echo esc_attr($position); ?>">
-			   	<li><a href="#" id="prevpoint" title="<?php _e('Previous Point On Map','travelblog'); ?>"><?php _e('Prev','travelblog') ?></a></li>
-		    	<li><a href="#" id="nextpoint" title="<?php _e('Next Point On Map','travelblog'); ?>"><?php _e('Next','travelblog') ?></a></li>
-			</ul>
-		<?php } ?>
 	<?php echo wpv_welcome(); ?>
+
+		<?php
+		$home = ot_get_option('pp_front_page_setup','global');
+		$position = ot_get_option('pp_front_map_position','behind');
+		if ( class_exists( 'TravellerPress' ) ) {
+			switch ($home) {
+				case 'global':
+					echo do_shortcode('[tp-global-map class="'.$position.'"]' );
+					break;	
+				case 'slider':
+					get_template_part( 'slider' );
+					break;	
+				case 'custom':
+					echo do_shortcode('[tp-custom-map type="as_global" id="'.ot_get_option('pp_custom_map_global',0).'" class="'.$position.'"]' );
+					break;	
+				case 'none':
+					echo '<div class="margin-top-50"></div>';
+					break;	
+				default:
+					echo '<div class="margin-top-50"></div>';
+					break;
+			};
+		} else {
+			switch ($home) {
+				case 'slider':
+					get_template_part( 'slider' );
+					break;	
+				case 'none':
+					echo '<div class="margin-top-50"></div>';
+					break;	
+				default:
+					echo '<div class="margin-top-50"></div>';
+					break;
+			};
+		} ?>
+
+	<div class="home-map">
+		<?php 
+			if ($mapflag) { ?>
+				<!-- Map Navigation -->
+				<ul id="mapnav-buttons" class="<?php echo esc_attr($position); ?>">
+					<li><a href="#" id="prevpoint" title="<?php _e('Previous Point On Map','travelblog'); ?>"><?php _e('Prev','travelblog') ?></a></li>
+					<li><a href="#" id="nextpoint" title="<?php _e('Next Point On Map','travelblog'); ?>"><?php _e('Next','travelblog') ?></a></li>
+				</ul>
+		<?php } ?>
+	</div>
+
 		<!-- Blog Posts -->
 		<?php if($layout !="full-width") { ?>
 			<div class="eleven columns"> 
@@ -80,7 +119,7 @@ $position = ot_get_option('pp_front_map_position','behind');
 			} else {
 				the_posts_navigation(array(
 		 			'prev_text'  => ' ',
-		            'next_text'  => ' ',
+		      'next_text'  => ' ',
 				)); 
 			}
 			?>
