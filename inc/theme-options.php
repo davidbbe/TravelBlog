@@ -344,20 +344,6 @@ function custom_theme_options() {
           'section'     => 'home'
         ),*/
 
-
-       
-        array(
-            'label'       => 'Header over the map (boxed | full-width)',
-            'id'          => 'pp_header_boxed',
-            'type'        => 'on_off',
-            'desc'        => 'If set to ON header will be switched to boxed mode and displayed over the map',
-            'std'         => 'on',
-            'rows'        => '',
-            'post_type'   => '',
-            'taxonomy'    => '',
-            'class'       => '',
-            'section'     => 'header'
-        ),
         array(
             'label'       => 'Upload logo',
             'id'          => 'pp_logo_upload',
@@ -369,61 +355,12 @@ function custom_theme_options() {
             'taxonomy'    => '',
             'class'       => '',
             'section'     => 'header'
-        ),    
-        array(
-            'label'       => 'Upload Mobile logo',
-            'id'          => 'pp_mobilelogo_upload',
-            'type'        => 'upload',
-            'desc'        => 'On mobile devices this logo will be used instead of your main logo. It is useful if your main logo has unusual dimension and doesn\'t fit nicely in small mobile header',
-            'std'         => '',
-            'rows'        => '',
-            'post_type'   => '',
-            'taxonomy'    => '',
-            'class'       => '',
-            'section'     => 'header'
         ),
-        array(
-          'label'       => 'Logo top margin',
-          'id'          => 'pp_logo_top_margin',
-          'type'        => 'measurement',
-          'desc'        => 'Set top margin for logo image',
-          'std'         => '',
-          'rows'        => '',
-          'post_type'   => '',
-          'taxonomy'    => '',
-          'class'       => '',
-          'section'     => 'header'
-          ),
-        array(
-          'label'       => 'Logo bottom margin',
-          'id'          => 'pp_logo_bottom_margin',
-          'type'        => 'measurement',
-          'desc'        => 'Set bottom margin for logo image',
-          'std'         => '',
-          'rows'        => '',
-          'post_type'   => '',
-          'taxonomy'    => '',
-          'class'       => '',
-          'section'     => 'header'
-        ),        
-        array(
-          'label'       => 'Tagline top margin',
-          'id'          => 'pp_tagline_margin',
-          'type'        => 'measurement',
-          'desc'        => 'Set bottom margin for tagline (blog description)',
-          'std'         => '',
-          'rows'        => '',
-          'post_type'   => '',
-          'taxonomy'    => '',
-          'class'       => '',
-          'section'     => 'header'
-        ),
-
         array(
           'label'       => 'Logo area width',
           'id'          => 'pp_logo_area_width',
           'type'        => 'select',
-          'desc'        => 'Full width of top area is 16 columns. Logo area by default is 13 columns, while icons and contact details area is 3 columns wide. If you want to have bigger logo, please change here number of columns for logo. ',
+          'desc'        => 'Logo area by default is 3 columns. Full width of top area is 16 columns. Higher number increases the size of the logo.',
           'choices'     => array(
             array('label'  => '1 column','value' => '1'),
             array('label'  => '2 columns','value' => '2'),
@@ -431,15 +368,20 @@ function custom_theme_options() {
             array('label'  => '4 columns','value' => '4'),
             array('label'  => '5 columns','value' => '5'),
             array('label'  => '6 columns','value' => '6'),
-            array('label'  => '7 columns','value' => '7'),
-            array('label'  => '8 columns','value' => '8'),
-            array('label'  => '9 columns','value' => '9'),
-            array('label'  => '10 columns','value' => '10'),
-            array('label'  => '11 columns','value' => '11'),
-            array('label'  => '12 columns','value' => '12'),
-            array('label'  => '16 columns(full-width)','value' => '16'),
             ),
           'std'         => '3',
+          'rows'        => '',
+          'post_type'   => '',
+          'taxonomy'    => '',
+          'class'       => '',
+          'section'     => 'header'
+        ),
+        array(
+          'label'       => 'Nav bar background color',
+          'id'          => 'pp_navbar_color',
+          'type'        => 'text',
+          'desc'        => 'Enter the hex code color for the nav bar background. Example: #314152',
+          'std'         => '#314152',
           'rows'        => '',
           'post_type'   => '',
           'taxonomy'    => '',

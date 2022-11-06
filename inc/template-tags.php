@@ -591,23 +591,6 @@ function get_wpv_header_class( $class = '' ) {
 	
 	$colorscheme = get_theme_mod('travelblog_header_scheme','black');
 	$classes[] = $colorscheme;
-	if(ot_get_option('pp_header_boxed','off') == 'on') {
-		
-		if ( class_exists( 'TravellerPress' ) ) {
-			if(is_home() || is_front_page()){
-				if ($home == 'global' || $home == 'single') {
-					$classes[] = 'boxed';
-				}
-			}
-			if(is_singular()) {
-				$post_id = $wp_query->get_queried_object_id();
-				$type = get_post_meta($post_id, "pp_post_type", $single = true); 
-				if ($type == 'map' || $type == 'photo') {
-					$classes[] = 'boxed';
-				}
-			}
-		}
-	}
 	if(is_singular()) {
 			$post_id = $wp_query->get_queried_object_id();
 			

@@ -9,7 +9,10 @@
 
 ?>
 
-<div id="footer">
+<?php
+$navBG = ot_get_option( 'pp_navbar_color');
+?>
+<div id="footer" style="<?php if(!empty($navBG)){echo 'background:' . $navBG; } ?>">
 
 	<div class="container">
 		<?php 
@@ -33,7 +36,7 @@
 		<div class="sixteen columns">
 			<h4><?php echo esc_html(ot_get_option('pp_funfuctstitle')); ?></h4>
 
-			<div class="fun-facts-container">
+			<div class="fun-facts-container" style="<?php if(!empty($navBG)){echo 'background:' . $navBG . ';filter: brightness(0.9);'; } ?>">
 				<?php 
 				foreach ($funfacts as $fun) { ?>
 				<div class="fun-fact">

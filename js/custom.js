@@ -13,7 +13,8 @@
       animated: true,
       duration: 200,
       keyboardShortcuts: false,
-      closeOnContentClick: false
+      closeOnContentClick: false,
+      direction: 'right'
     });
 
 

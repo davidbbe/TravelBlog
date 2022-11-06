@@ -17,12 +17,10 @@
         excludedPanelContent: 'style, script, .viewer',
         clone: true,
         keepEventHandlers: false,
-
         direction: 'left',
         openPosition: '250px',
         animated: false,
         closeOnContentClick: false,
-
         keyboardShortcuts: [
           {
             code: 27,

@@ -239,7 +239,6 @@ function travelblog_scripts() {
 	wp_localize_script( 'travelblog-custom', 'wpv',
     array(
       'logo'=> ot_get_option('pp_logo_upload'),
-      'mobilelogo'=> ot_get_option('pp_mobilelogo_upload'),
       'maptype'=> (isset($mapoptions['map_el_type'])) ? $mapoptions['map_el_type'] : 'ROADMAP' ,
       'mapzoom'=> (isset($mapoptions['map_el_zoom'])) ? $mapoptions['map_el_zoom'] : 'auto' ,
       'mapstyle'=> $mapstyle,

@@ -504,7 +504,7 @@ body #wp-calendar tbody td#today a {
   }
 
   .black .search-trigger,
-  .black a.menu-trigger { color: #fff; background: #222; }
+  .black a.menu-trigger { color: #fff; }
 
   .black #logo img {margin-top: 31px;}
 
@@ -513,7 +513,6 @@ body #wp-calendar tbody td#today a {
     display: block;
     font-size: 26px;
     float: left;
-    background: #fff;
     z-index: 100;
     position: relative;
   }
@@ -527,7 +526,6 @@ body #wp-calendar tbody td#today a {
     font-size: 24px;
     float: right;
     cursor: pointer;
-    background: #fff;
     z-index: 100;
     position: relative;
   }
@@ -562,10 +560,10 @@ body #wp-calendar tbody td#today a {
   #header.black .close-search a:hover { color: #fff}
 
   .search-trigger { padding: 27px 0 23px 30px; }
-  a.menu-trigger { padding: 28px 30px 22px 0; }
+  a.menu-trigger { padding: 5px 10px; }
 
   .black .search-trigger { padding: 25px 0 25px 30px; }
-  .black a.menu-trigger { padding: 25px 30px 25px 0; }
+  .black a.menu-trigger { padding: 5px 10px; }
 
   #header.boxed .header-search input {
     width: 70%;
@@ -4329,7 +4327,7 @@ input:focus.newsletter {
 ------------------------------------- */
 
 .fun-facts-container {
-  background-color: #293745;
+  background: #293745;
   border-bottom: 3px solid #3685cf;
   margin: 0 0 40px 0;
   padding: 28px 35px 15px 35px;
